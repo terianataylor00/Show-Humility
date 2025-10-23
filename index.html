@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Show Humility — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Show Humility">
+        <img src="images/SH-logo.png" alt="Show Humility Logo" class="logo">
+        <span class="brand-name">Show Humility</span>
+      </a>
+
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html" aria-current="page">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="washers.html">WASHERS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-left">
+        <h1 class="display">Show<br>Humility</h1>
+        <p class="muted smtop">A global initiative with a single focus:</p>
+        <blockquote class="pull"><em>“Once a year, the world’s most powerful people wash the feet of those they serve.”</em></blockquote>
+      </div>
+      <figure class="hero-media">
+        <img src="./images/handsUnderWater.png" alt="Water pouring on hands">
+      </figure>
+    </section>
+
+    <!-- STAGGERED Q CARDS -->
+    <section class="container stagger">
+      <!-- Row 1: text left, card right -->
+      <div class="stagger-row">
+        <p class="stagger-copy">
+          We believe there is no more powerful act to demonstrate humility. In a time when societies are fragmenting and trust is under strain, this simple, symbolic gesture shows that leaders care — and are willing to serve.
+        </p>
+        <div class="q-card">Why the<br>washing of<br>feet?</div>
+      </div>
+      <!-- Row 2: card left, text right -->
+      <div class="stagger-row">
+        <div class="q-card">Who will the<br>washers be?</div>
+        <p class="stagger-copy">
+          By “the most powerful people,” we mean the Presidents, Prime Ministers, and Sovereigns of all 206 states across the globe.
+        </p>
+      </div>
+    </section>
+
+    <!-- TILES -->
+    <section class="container tiles">
+      <p class="caption-small">
+        But leadership goes beyond politics. We also call upon influential figures from across society — including:
+      </p>
+      <div class="tile-row">
+        <div class="tile">Government &amp; Members of Parliament</div>
+        <div class="tile">Royalty, Lords, Military</div>
+        <div class="tile">Business &amp; Faith Leaders</div>
+        <div class="tile">Media, Sports, &amp; Cultural Icons</div>
+      </div>
+      <p class="caption-small">
+        Each event is expected to have at least 70 washers each washing over 20 peoples feet, so at least a 1,400 are washed at every event.
+      </p>
+    </section>
+
+    <!-- STAT BAND -->
+    <section class="container stat-band">
+      <div class="stat">
+        <div class="stat-number">+1000</div>
+        <div class="stat-label">people washed</div>
+      </div>
+      <p class="stat-copy">
+        Each event is expected to have at least 70 washers each washing over 20 peoples feet, se at least a 1,400 are washed at every event.
+      </p>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="container register">
+      <h2>Register Your State or City</h2>
+      <p>We encourage every nation and city to create their own Show Humility movement and register it here on our website. We will do everything we can to support you.</p>
+      <h3>Registration is simple. To begin, you only need:</h3>
+      <ul class="checklist">
+        <li>An exclusive region (your nation or city)</li>
+        <li>A venue for the event</li>
+        <li>12 committed “washers” to start with</li>
+      </ul>
+      <p>With these foundations in place, you can launch a movement that inspires humility and unity in your community.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© All rights reserved 2025 WINMARK</p>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="./footer-docs/Data-Privacy-Policy-2022.pdf" target="_blank">Privacy Policy</a>
+        <a href="./footer-docs/cookies.pdf" target="_blank">Cookie Policy</a>
+        <a href="./footer-docs/Terms-and-Conditions.pdf" target="_blank">Terms and Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Show Humility — Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Show Humility">
+        <img src="images/SH-logo.png" alt="Show Humility Logo" class="logo">
+        <span class="brand-name">Show Humility</span>
+      </a>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="washers.html">WASHERS</a></li>
+          <li><a href="contact.html" aria-current="page">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main" id="contact-main">
+    <section class="container contact-wrap">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h1 class="contact-title">Get in contact<br>with us!</h1>
+
+          <p class="contact-lede">We would love to hear from you!</p>
+          <p class="contact-copy">
+            Please complete the form, and our team will be in touch with you shortly.
+          </p>
+          <p class="contact-copy">
+            Washers, partners, and large groups will all be referred to the show humility board.
+          </p>
+        </div>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <label class="sr-only" for="name">Full name</label>
+          <input id="name" name="name" class="field" type="text" placeholder="Full name" autocomplete="name" />
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" class="field" type="email" placeholder="Email" autocomplete="email" />
+
+          <label class="sr-only" for="subject">Subject</label>
+          <input id="subject" name="subject" class="field" type="text" placeholder="Subject" />
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" class="field tall" placeholder="Your message"></textarea>
+
+          <label class="sr-only" for="org">Organisation / Group (optional)</label>
+          <fieldset class="contact-radio-group">
+            <legend>Type of Collaboration</legend>
+
+            <label class="radio-option">
+              <input type="radio" name="org" value="Volunteer"> Volunteer
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="org" value="Washer"> Washer
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="org" value="Groups Attending (20+)"> Groups Attending (20+)
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="org" value="Register Your City"> Register Your City
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="org" value="Partners & Others"> Partners & Others
+            </label>
+          </fieldset>
+
+
+          <button class="btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© All rights reserved 2025 WINMARK</p>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="./footer-docs/Data-Privacy-Policy-2022.pdf" target="_blank">Privacy Policy</a>
+        <a href="./footer-docs/cookies.pdf" target="_blank">Cookie Policy</a>
+        <a href="./footer-docs/Terms-and-Conditions.pdf" target="_blank">Terms and Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

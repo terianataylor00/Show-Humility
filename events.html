@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Show Humility — Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Show Humility">
+        <img src="images/SH-logo.png" alt="Show Humility Logo" class="logo">
+        <span class="brand-name">Show Humility</span>
+      </a>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="events.html" aria-current="page">EVENTS</a></li>
+          <li><a href="washers.html">WASHERS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Events</h1>
+      </div>
+    </section>
+
+    <section class="container event-intro">
+      <div class="events-grid">
+        <figure class="event-media">
+          <img
+            src="./images/Battersea Power Station.jpg"
+            alt="Battersea Power Station aerial view" />
+        </figure>
+
+        <div class="event-copy">
+          <p>
+            The first event will take place in London and is already generously supported by
+            Thames Water and Battersea Power Station.
+          </p>
+          <ul>
+            <li><strong>Timing:</strong> 0930 – 1600</li>
+            <li><strong>Date:</strong> Summer 2026 (pending the King &amp; PM)</li>
+            <li><strong>Venue:</strong> Glide (Front Lawn) at Battersea Power Station, SW11</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© All rights reserved 2025 WINMARK</p>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="./footer-docs/Data-Privacy-Policy-2022.pdf" target="_blank">Privacy Policy</a>
+        <a href="./footer-docs/cookies.pdf" target="_blank">Cookie Policy</a>
+        <a href="./footer-docs/Terms-and-Conditions.pdf" target="_blank">Terms and Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Show Humility — About</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Show Humility">
+        <img src="images/SH-logo.png" alt="Show Humility Logo" class="logo">
+        <span class="brand-name">Show Humility</span>
+      </a>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" aria-current="page">ABOUT</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="washers.html">WASHERS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!-- Title + lede -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>About Us</h1>
+        <p class="lede">
+          Show Humility is not a religious event, nor a fundraising initiative.
+          It is a simple, profound act of humility.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image left / text right -->
+    <section class="container about-grid">
+      <figure class="about-media">
+        <img src="./images/feetInWater.png"
+             alt="Hands and feet being washed" />
+      </figure>
+
+      <div class="about-copy">
+        <p>
+          When you mention the movement to the people, two reactions are common: some pause, smile, and say “I get it” — and immediately want to be involved. Others shy away from the act of humility. Interestingly, head teachers consulted about the initiative were enthusiastic, seeing it as a meaningful way to engage their pupils.
+        </p>
+        <p>
+          The washed will include school children, prisoners, families, workers of all kinds, the homeless — in fact, people like you and me. No one is excluded, and all are welcome.
+        </p>
+        <p>
+          The movement was founded by John Jeffcock, who first attempted to launch it in London in 2012 and 2014, but struggled to find a venue. Attempts continued through the years until the Covid-19 pandemic. Then, in 2025, momentum returned: the CEO of the Battersea Power Station generously offered its front lawn as a venue, and Thames Water stepped in to provide the water. With this support, washer recruitment could begin in earnest once again.
+        </p>
+      </div>
+    </section>
+
+    <!-- Governance card -->
+    <section class="container">
+      <div class="card governance">
+        <h2>Governance</h2>
+        <p>Show Humility is chaired by John Jeffcock and overseen by the Show Humility Board.</p>
+        <p>The Board, appointed by John Jeffcock, has several key responsibilities:</p>
+        <ul>
+          <li>Recruiting washers and approving washer applications</li>
+          <li>Publicizing the opportunity to be washed across all parts of society</li>
+          <li>Organizing the event, ensuring security, and managing media attention</li>
+        </ul>
+        <p class="muted">The members of the Show Humility Board will be listed here</p>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="container history">
+      <h2>History</h2>
+      <p>
+        The washing of feet is an ancient tradition found across many faiths and cultures. It appears in all three monotheistic religions — Judaism, Christianity, and Islam — and is also practiced in Eastern religions such as Buddhism and Hinduism. The meaning varies: in some traditions it represents humility, in others leadership, cleansing, or the expelling of evil or negative energy.
+      </p>
+      <p>
+        In history, the act has also been tied to leadership and monarchy. Mary I of England (1556–1558), for example, washed the feet of 41 poor women — one for each year of her life — kneeling as she did so. Most sources record that James II of England (1633–1701) was the last English monarch to personally wash the feet of the poor. At the time, it was customary for Yeomen to pre-wash the feet before they reached the monarch.
+      </p>
+      <p>
+        At Show Humility events, however, there will be no pre-washing — the act is performed directly, in its purest and most meaningful form.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© All rights reserved 2025 WINMARK</p>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="./footer-docs/Data-Privacy-Policy-2022.pdf" target="_blank">Privacy Policy</a>
+        <a href="./footer-docs/cookies.pdf" target="_blank">Cookie Policy</a>
+        <a href="./footer-docs/Terms-and-Conditions.pdf" target="_blank">Terms and Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
